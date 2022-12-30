@@ -1,0 +1,119 @@
+.personDetail {
+  overflow: hidden;
+  background: url('~@/assets/images/personDetail.png') no-repeat
+    center/cover;
+  position: relative;
+align-items: center;
+  .scoreBox {
+    width: 980px;
+    height: 408px;
+    background: #052562;
+    margin-left: 175px;
+    margin-top: 61px;
+    border: 1px solid rgba(168, 197, 255, 0.32);
+
+    .tableTitle {
+      height: 59px;
+      background: url('~@/assets/images/tableTitleBg.png')
+        no-repeat center/cover;
+      line-height: 59px;
+      display: flex;
+      justify-content: flex-end;
+      span {
+        font-size: 26px;
+        font-family: OPPOSans-B, OPPOSans;
+        font-weight: normal;
+        color: #ffffff;
+        min-width: 187px;
+        display: inline-block;
+      }
+      .active {
+        color: #ff9023;
+      }
+    }
+
+    .tableContent {
+      padding: 16px;
+
+      .tableItem {
+        height: 72px;
+        background: url('~@/assets/images/tableItemBg.png')
+          no-repeat center/cover;
+        padding-left: 24px;
+        padding-right: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+        &:nth-child(n + 2) {
+          justify-content: space-between;
+        }
+
+        label {
+          font-size: 24px;
+          font-family: OPPOSans-M, OPPOSans;
+          font-weight: normal;
+          color: #ffffff;
+        }
+
+        span {
+          font-size: 20px;
+          font-family: OPPOSans-M, OPPOSans;
+          font-weight: normal;
+          color: #ffffff;
+        }
+        .tableItem {
+          flex: 1;
+        }
+        span.target {
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          margin-right: 40px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .miss {
+          background: #ab1720;
+        }
+
+        .hit {
+          background: #6bff9e;
+        }
+      }
+    }
+  }
+  .rankImg {
+    width: 39px;
+    height: 40px;
+    margin-top: -4px;
+  }
+
+  .rankCircle {
+    width: 39px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(
+      180deg,
+      rgba(30, 193, 238, 0) 0%,
+      rgba(22, 163, 238, 0.16) 60%,
+      rgba(7, 107, 237, 0.49) 100%
+    );
+    box-shadow: inset 0px 0px 5px 0px rgba(167, 217, 255, 0.42);
+    font-size: 22px;
+    font-family: OPPOSans-B, OPPOSans;
+    font-weight: normal;
+    color: #bbe9ff;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 13px;
+    margin-top: -4px;
+  }
+  .personImg {
+    position: absolute;
+    right: 166px;
+    bottom: 213px;
+    transform: scale(1.7);
+  }
+}

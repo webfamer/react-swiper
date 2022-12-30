@@ -1,0 +1,163 @@
+.personRank {
+    background: url('~@/assets/images/rankBg.png') no-repeat center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    .table{
+      width: 920px;
+    }
+  .tableTitle {
+    height: 72px;
+    background: url('~@/assets/images/subjectTableTitleBg.png') no-repeat
+      center/cover;
+    box-sizing: border-box;
+    padding-left: 46px;
+    padding-right: 72px;
+
+    span {
+      display: inline-block;
+      font-size: 28px;
+      width: 121px;
+      text-align: left;
+      font-family: OPPOSans-B, OPPOSans;
+      font-weight: normal;
+      color: #ffffff;
+      line-height: 72px;
+    }
+
+    span:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      transform: translateX(100%);
+    }
+
+    10% {
+      transform: translateX(0);
+    }
+    90% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      transform: translateX(100%);
+    }
+
+    10% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .tableContent {
+    height: 712px;
+    overflow: hidden;
+    .table {
+      .tableItem {
+        height: 89px;
+        background: rgba(79, 173, 223, 0.14);
+        border: 1px solid #173048;
+        box-sizing: border-box;
+        padding-left: 46px;
+        padding-right: 72px;
+        display: flex;
+        align-items: center;
+        .rankLogoBg {
+          background: url('~@/assets/images/rankLogo.png') no-repeat
+            center/cover;
+          width: 58px;
+          height: 41px;
+          margin-right: 63px;
+          text-align: center;
+          line-height: 30px;
+        }
+
+        .rankcircleBg {
+          font-size: 22px;
+          font-family: OPPOSans-B, OPPOSans;
+          font-weight: normal;
+          color: #bbe9ff;
+          display: inline-block;
+          margin-right: 72px;
+          margin-left: 8px;
+          text-align: center;
+          line-height: 42px;
+          width: 41px;
+          height: 42px;
+          border-radius: 50%;
+          background: linear-gradient(
+            180deg,
+            rgba(30, 193, 238, 0) 0%,
+            rgba(22, 163, 238, 0.16) 60%,
+            rgba(7, 107, 237, 0.49) 100%
+          );
+          box-shadow: inset 0px 0px 5px 0px rgba(167, 217, 255, 0.42);
+        }
+
+        & > span {
+          display: inline-block;
+          width: 121px;
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 28px;
+          font-family: OPPOSans-M, OPPOSans;
+          font-weight: normal;
+          color: #ffffff;
+        }
+
+        .target {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 90px;
+        }
+
+        .circleBg {
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+          display: inline-block;
+          text-align: center;
+          background-color: #ffb03e;
+          color: #fff;
+          margin-right: 72px;
+          font-size: 22px;
+          border-radius: 50%;
+          font-weight: bold;
+        }
+
+        .miss {
+          background: #ab1720;
+        }
+
+        .hit {
+          background: #6bff9e;
+        }
+      }
+      .fadeInOut {
+        animation: fadeInOut ease-in-out 10s;
+        animation-fill-mode: forwards;
+      }
+      .fadeIn {
+        animation: fadeIn ease-in-out 10s;
+        animation-fill-mode: forwards;
+      }
+      .hideTable {
+        opacity: 0;
+      }
+    }
+  }
+}

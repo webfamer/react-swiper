@@ -1,0 +1,141 @@
+.personBg {
+  background: url('~@/assets/images/personBg.png') no-repeat center/cover;
+  justify-content: center;
+  position: 'relative';
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+
+  .flexCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  .transiton {
+    transition: all 1s ease-in-out;
+  }
+
+  .center {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  .right {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    top: 0;
+  }
+
+  .left {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    top: 0;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -40px;
+
+    p {
+      margin: 0;
+      font-size: 42px;
+      font-family: FZZDHJW--GB1-0, FZZDHJW--GB1;
+      font-weight: normal;
+      color: #ffffff;
+      line-height: 52px;
+      letter-spacing: 1px;
+      display: inline-block;
+      background: linear-gradient(180deg, #ffffff 0%, #4290e0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    img {
+      width: 1247px;
+      height: 125px;
+    }
+  }
+
+  .personContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .personBox {
+      width: 289px;
+      height: 323px;
+      border-radius: 10px;
+      left: -13px;
+      top: -16px;
+      background: url('~@/assets/images/personBox.png') no-repeat
+        center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 23px 21px;
+      margin-right: 120px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        width: 218px;
+        height: 181px;
+      }
+
+      &:nth-child(n + 5) {
+        margin-top: 42px;
+      }
+
+      .infoItem {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          margin-top: 13px;
+        }
+
+        span {
+          display: inline-block;
+          font-size: 28px;
+          font-family: AlibabaPuHuiTi-Medium, AlibabaPuHuiTi;
+          font-weight: 500;
+          color: #ffffff;
+          // max-width: 108px;
+          // text-overflow: ellipsis;
+          // overflow: hidden;
+          white-space: nowrap;
+        }
+
+        .point {
+          width: 8px;
+          height: 8px;
+          background: #a7e1ff;
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+      }
+    }
+    .ninePersonBox {
+      &:nth-child(n + 5) {
+        margin-right: 70px;
+      }
+      &:nth-child(4) {
+        margin-right: 47px;
+      }
+    }
+    .eightPersonBox {
+      &:nth-child(4n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
